@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="">
     <meta name="author" content="">
-    <title>Новости</title>
+    <title>Записаться на прием</title>
 
     <!-- core CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
@@ -24,7 +24,8 @@
     <link rel="apple-touch-icon-precomposed" sizes="114x114" href="images/ico/apple-touch-icon-114-precomposed.png">
     <link rel="apple-touch-icon-precomposed" sizes="72x72" href="images/ico/apple-touch-icon-72-precomposed.png">
     <link rel="apple-touch-icon-precomposed" href="images/ico/apple-touch-icon-57-precomposed.png">
-</head><!--/head-->
+</head>
+<!--/head-->
 
 <body>
 
@@ -66,13 +67,13 @@
                             <li><a href="service-1.html">По ведомствам</a></li>
                             <li><a href="service-1.html">Жизненные ситуации</a></li>
                             <li><a href="service-1.html">Все услуги</a></li>
-                            <li><a href="pre-entry.html">Записаться в очередь</a></li>
+                            <li class="active"><a href="pre-entry.html">Записаться в очередь</a></li>
                         </ul>
                     </li>
                     <li><a href="about-us.html">О нас</a></li>
                     <li><a href="documents.html">Документы</a></li>
                     <li><a href="gallery.html">Фотогалерея</a></li>
-                    <li class="active"><a href="news.html">Новости</a></li>
+                    <li><a href="news.html">Новости</a></li>
                     <li><a href="contact-us.html">Контакты</a></li>
                 </ul>
             </div>
@@ -81,80 +82,46 @@
 
 </header><!--/header-->
 
-
-
 <section id="blog" class="container">
     <div class="center">
-        <h2>Новости</h2>
+        <h2>Предварительная запись на прием</h2>
     </div>
-
-    <div class="blog">
-        <div class="row">
-            <div class="col-md-8">
-                <div class="blog-item wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="200ms">
-                    <img class="img-responsive img-blog" src="images/blog/MFC_Plenum.jpg" width="100%" alt="" />
-                        <div class="row">
-                        <div class="col-xs-12 col-sm-2 text-center">
-                            <div class="entry-meta">
-                                <span id="publish_date">07 ноября 2014</span>
-                            </div>
-                        </div>
-                        <div class="col-xs-12 col-sm-10 blog-content">
-                            <h2>Мы запустили наш портал "Мои документы"</h2>
-                                <p>
-                                    Гражданам, обратившимся в этот день за консультацией, была предоставлена возможность в одном месте получить разъяснения по интересующим их вопросам в сфере государственного кадастрового учета и государственной регистрации прав на недвижимое имущество и сделок с ним, технической инвентаризации, налогообложения и отчетности, пенсионного обеспечения, миграционного учета и др.
-                                </p>
-                            <p>
-                                Гражданам, обратившимся в этот день за консультацией, была предоставлена возможность в одном месте получить разъяснения по интересующим их вопросам в сфере государственного кадастрового учета и государственной регистрации прав на недвижимое имущество и сделок с ним, технической инвентаризации, налогообложения и отчетности, пенсионного обеспечения, миграционного учета и др.
-
-                            </p>
-
-
-                        </div>
-                    </div>
-                </div><!--/.blog-item-->
-
-
-            </div><!--/.col-md-8-->
-
-            <aside class="col-md-4">
-                <div class="widget search">
-                    <form role="form">
-                        <input type="text" class="form-control search_box" autocomplete="off" placeholder="Найти новость">
-                    </form>
-                </div><!--/.search-->
-
-                <div class="widget archieve">
-                    <h3>Архив новостей</h3>
-                    <div class="row">
-                        <div class="col-sm-12">
-                            <ul class="blog_archieve">
-                                <li><a href="#"><i class="fa fa-angle-double-right"></i> Январь 2016 <span class="pull-right">(97)</span></a></li>
-                                <li><a href="#"><i class="fa fa-angle-double-right"></i> Февраль 2016 <span class="pull-right">(32)</span></a></li>
-                            </ul>
-                        </div>
-                    </div>
-                </div><!--/.archieve-->
-
-                <div class="widget blog_gallery">
-                    <h3>Наша галерея</h3>
-                    <ul class="sidebar-gallery">
-                        <li><a href="#"><img src="images/blog/gallery1.png" alt="" /></a></li>
-                        <li><a href="#"><img src="images/blog/gallery2.png" alt="" /></a></li>
-                        <li><a href="#"><img src="images/blog/gallery3.png" alt="" /></a></li>
-                        <li><a href="#"><img src="images/blog/gallery4.png" alt="" /></a></li>
-                        <li><a href="#"><img src="images/blog/gallery5.png" alt="" /></a></li>
-                        <li><a href="#"><img src="images/blog/gallery6.png" alt="" /></a></li>
-                    </ul>
-                </div><!--/.blog_gallery-->
-            </aside>
-
-        </div><!--/.row-->
-
-    </div><!--/.blog-->
-
-</section><!--/#blog-->
-
+    <div class="row contact-wrap">
+        <div class="status alert alert-success" style="display: none"></div>
+        <form id="main-contact-form" class="contact-form" name="contact-form" method="post" action="sendemail.php">
+            <div class="col-sm-5 col-sm-offset-1">
+                <div class="form-group">
+                    <label>Фамилия *</label>
+                    <input type="text" name="surname" class="form-control" required="required">
+                </div>
+                <div class="form-group">
+                    <label>Имя *</label>
+                    <input type="text" name="name" class="form-control" required="required">
+                </div>
+                <div class="form-group">
+                    <label>Отчество *</label>
+                    <input type="text" name="patronymic" class="form-control" required="required">
+                </div>
+            </div>
+            <div class="col-sm-5">
+                <div class="form-group">
+                    <label>Дата *</label>
+                    <input type="text" name="patronymic" class="form-control" required="required" placeholder="дд.мм.ггггг">
+                </div>
+                <div class="form-group">
+                    <label>Время *</label>
+                    <input type="text" name="patronymic" class="form-control" required="required" placeholder="чч:мм">
+                </div>
+            </div>
+            <div class="col-sm-12 text-center">
+                <div class="form-group">
+                    <button type="submit" name="submit" class="btn btn-primary btn-lg" required="required">Записаться</button>
+                </div>
+            </div>
+        </form>
+    </div><!--/.row-->
+</section>
+<!--/#blog-->
 
 
 <footer id="footer" class="midnight-blue">
@@ -191,7 +158,6 @@
     </div>
 </footer><!--/#footer-->
 <!--/#footer-->
-
 
 <script src="js/jquery.js"></script>
 <script src="js/bootstrap.min.js"></script>

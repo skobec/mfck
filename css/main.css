@@ -1,9 +1,14 @@
 @import url(http://fonts.googleapis.com/css?family=PT+Sans:400,700&subset=latin,cyrillic-ext);
+html {
+  min-height: 100%;
+  position: relative;
+}
 body {
   background: #fff;
   font-family: 'PT Sans', sans-serif;
   color: #4e4e4e;
   line-height: 22px;
+  margin-bottom: 180px;
 }
 h1,
 h2,
@@ -295,7 +300,7 @@ input.search-form:hover::-webkit-input-placeholder {
   font-weight: bold;
 }
 .navbar-nav > li {
-  margin-left: 35px;
+  margin-left: 3px;
   padding-bottom: 28px;
 }
 .navbar-inverse {
@@ -871,8 +876,14 @@ input.search-form:hover::-webkit-input-placeholder {
   float: left;
   width: 25%;
 }
+.partners ul li a {
+  height: 100px;
+  position: relative;
+  display: inline-block;
+}
 .partners ul li a .img-responsive {
   display: inline;
+  height: 100%;
 }
 #conatcat-info {
   background: #ffffff url("../images/logoTop.png") no-repeat 85% top;
@@ -2043,6 +2054,9 @@ ul.sidebar-gallery {
   padding-bottom: 30px;
   color: #fff;
   background: #2e2e2e;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
 }
 #footer a {
   color: #fff;
@@ -2119,4 +2133,82 @@ ul.sidebar-gallery {
 }
 .login_btn a:hover {
   color: #DE4E30;
+}
+.arbeit_title {
+  font-size: 24px;
+  font-weight: bold;
+}
+.view.view-111.view-id-111.view-display-id-page h3 {
+  font-weight: normal;
+  background-color: #F7F7F7;
+  border-left-width: 5px;
+  border-left-style: solid;
+  border-color: #C39367;
+  padding: 5px 5px 5px 10px;
+}
+.view.view-111.view-id-111.view-display-id-page h3:after {
+  content: "";
+  left: 0;
+  top: 0;
+  width: 0;
+  height: 0;
+  border-top: 10px solid #FFFFFF;
+  border-right: 10px solid transparent;
+  position: absolute;
+}
+.view.view-111.view-id-111.view-display-id-page td {
+  margin-bottom: 10px;
+  display: block;
+  border-left-width: 5px;
+  border-left-style: solid;
+  border-color: #E0E0E0;
+}
+.goleft {
+  display: inline-block;
+  float: left;
+  margin-right: 10px;
+  margin-top: 5.4px;
+  background: url("../images/ico/ico_mfc_mini.png") no-repeat;
+  width: 16px;
+  height: 16px;
+}
+.title-usl {
+  display: block;
+}
+.views-view-grid {
+  width: 100%;
+}
+.service_list {
+  margin-top: -20px;
+}
+.title_name_cat_serv {
+  font-size: 24px;
+  color: #555555;
+}
+.service_info_list {
+  color: #555555;
+}
+.service_info_list h1 {
+  font-size: 24px;
+  color: #555555;
+}
+.list_about_info {
+  list-style-image: url("../images/ico/ico_mfc_mini.png");
+}
+td.row1 {
+  width: 23%;
+}
+@media screen and (max-width: 900px) {
+  html {
+    min-height: inherit;
+    position: static;
+  }
+  body {
+    margin-bottom: inherit;
+  }
+  #footer {
+    position: relative;
+    bottom: 0;
+    width: 100%;
+  }
 }
